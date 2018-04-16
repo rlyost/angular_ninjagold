@@ -1,0 +1,36 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div id='wrapper'>
+    <div>
+        <h1>The Ninja Entrepreneur!!!</h1>
+        <h2>Your Gold:</h2>
+        <p class='score'>{{ your_gold }}</p>
+    </div>
+    <div class='places'>
+        <div class='building'>
+            <h2>Farm</h2>
+            <p>(Earns 2-30 gold)</p>
+            <input type="submit" (click)="onButtonClickParam('farm')" value="Farm!"/>
+        </div>
+        <div class='building'>
+            <h2>Cave</h2>
+            <p>(Earns 5-10 gold)</p> 
+            <input type="submit" (click)="onButtonClickParam('cave')" value="Cave!"/>
+        </div>
+        <div class='building'>
+            <h2>House</h2>
+            <p>(Earns 7-15 gold)</p>
+            <input type="submit" (click)="onButtonClickParam('house')" value="House!"/>
+        </div>
+        <div class='building'>
+            <h2>Casino</h2>
+            <p>(Earn/lose up to 100 gold)</p>
+            <input type="submit" (click)="onButtonClickParam('casino')" value="Casino!"/>
+        </div>
+        <h3>Adventure Log:</h3>
+        <div class='activites'>
+            <p *ngFor="let x of activities">{{ x.activities }}</p>
+        </div>
+        <button (click)="onButtonClick()">Reset Adventure</button>
+    </div>
+</div>
+
